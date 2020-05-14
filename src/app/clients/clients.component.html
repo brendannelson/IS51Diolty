@@ -14,11 +14,7 @@
         <a class="nav-link" href="#">Clients<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-<<<<<<< HEAD
-        <a class="nav-link" href="#">Hello, {{ currentUser.username }}</a>
-=======
-        <a class="nav-link" href="#" (click)="showToast()">About<span class="sr-only">(current)</span></a>
->>>>>>> 55ebcd1039b8b50b992e1436f62cb04f2cf725f1
+        <a class="nav-link" (click)="showToast()">About<span class="sr-only">(current)</span></a>
       </li>
 
 
@@ -73,7 +69,9 @@
         <td *ngIf="!clients.editing">{{clients.phone}}</td>
         <td *ngIf="!clients.editing">
           <button type="button" class="btn btn-danger clients-button" (click)="deleteclients(i)">Delete</button>
-          <button type="button" class="btn btn-primary contact-button">Map</button>
+          <button class="button" class="btn btn-primary">
+            <a href="https://goo.gl/maps/vM7TfmxmmbLZU3DC8" class="button" style=color:aliceblue>Map</a>
+          </button>
         </td>
 
 

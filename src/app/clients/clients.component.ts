@@ -124,7 +124,7 @@ export class ClientsComponent implements OnInit {
 
   showToast() {
     const rand = Math.floor(Math.random() * 4);
-    this.toasteService.showToast('danger', `created by Brendan Nelson, Vanessa Elizondo & Nareg Apkarian: ` + rand, 90000);
+    this.toasteService.showToast('success', `Created by Brendan Nelson, Vanessa Elizondo & Nareg Apkarian (c).` + rand, 80000);
   }
 
 }
