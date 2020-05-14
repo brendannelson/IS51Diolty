@@ -8,7 +8,7 @@ const appRoutes: Routes = [
         path: '',
         component: LoginComponent
     }, {
-        path: 'contacts',
+        path: 'clients',
         component: ClientsComponent
     }, {
         path: '**',
