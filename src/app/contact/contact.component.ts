@@ -15,6 +15,7 @@ import { ToastService } from '../toast/toast.service';
 })
 export class ContactComponent implements OnInit {
 
+  toastTypes: Array<string> = [];
   contacts: Array<Contact> = [];
   contactParams: string;
   localStorageService: LocalStorageService<Contact>;
@@ -25,7 +26,7 @@ export class ContactComponent implements OnInit {
     private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private toasteService: ToastService
+    private toastService: ToastService
   ) {
     this.localStorageService = new LocalStorageService('contacts');
   }
@@ -77,7 +78,7 @@ export class ContactComponent implements OnInit {
     Object.keys(contact).forEach((key: any) => {
       if (contact[key] == null) {
         hasError = true;
-        this.toasteService.showToast('danger', `Save failed! Property ${key} must not be null`, 2000);
+        this.toastService.showToast('danger', `Save failed! Property ${key} must not be null`, 2000);
       }
     });
     if (!hasError) {
@@ -119,6 +120,11 @@ export class ContactComponent implements OnInit {
   logout() {
     this.localStorageService.clearItemsFromLocalStorage('user');
     this.router.navigate(['']);
+  }
+
+  showToast() {
+    const rand = Math.floor(Math.random() * 4);
+    this.toastService.showToast('danger', `Save failed! Property must not be null: ` + rand, 90000);
   }
 
 }
