@@ -77,7 +77,7 @@ export class ClientsComponent implements OnInit {
     Object.keys(clients).forEach((key: any) => {
       if (clients[key] == null) {
         hasError = true;
-        this.toasteService.showToast('danger', `Save failed! Property ${key} must not be null`, 2000);
+        this.toasteService.showToast('danger', `Save failed! ${key} cannot not be empty!`, 2000);
       }
     });
     if (!hasError) {
