@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         this.currentUser = this.localStorageService.getItemsFromLocalStorage();
         console.log('this.currentuser.....', this.currentUser);
         if (this.currentUser !== null) {
-            this.router.navigate(['contacts']);
+            this.router.navigate(['clients']);
 
         }
     }
