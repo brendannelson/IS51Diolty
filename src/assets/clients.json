@@ -9,17 +9,17 @@
     },
     {
         "id": 2,
-        "firstName": "Joe",
-        "lastName": "Schmoe",
-        "email": "joe@gmail.com",
+        "firstName": "Vanessa",
+        "lastName": "Elizondo",
+        "email": "vanessa@gmail.com",
         "phone": "(123) 456-7890",
         "editing": false
     },
     {
         "id": 3,
-        "firstName": "Hugh",
-        "lastName": "G.",
-        "email": "hugh@gmail.com",
+        "firstName": "Nareg",
+        "lastName": "Apkarian",
+        "email": "nareg@gmail.com",
         "phone": "(559) 805-6048",
         "editing": false
     }
