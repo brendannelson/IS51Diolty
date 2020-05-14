@@ -69,9 +69,7 @@
         <td *ngIf="!clients.editing">{{clients.phone}}</td>
         <td *ngIf="!clients.editing">
           <button type="button" class="btn btn-danger clients-button" (click)="deleteclients(i)">Delete</button>
-          <button class="button" class="btn btn-primary">
-            <a href="https://goo.gl/maps/vM7TfmxmmbLZU3DC8" class="button" style=color:aliceblue>Map</a>
-          </button>
+          <button onClick="window.location.href = 'https://goo.gl/maps/vM7TfmxmmbLZU3DC8';" class="btn btn-primary">Map</button>
         </td>
 
 
