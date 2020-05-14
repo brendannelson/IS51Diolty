@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         this.currentUser = this.localStorageService.getItemsFromLocalStorage();
         console.log('this.currentuser.....', this.currentUser);
         if (this.currentUser !== null) {
-            this.router.navigate(['contacts']);
+            this.router.navigate(['clients']);
 
         }
     }
@@ -40,8 +40,8 @@ export class LoginComponent implements OnInit {
                 // log the user in
                 // store user in local storage
                 this.localStorageService.saveItemsToLocalStorage(user);
-                // navigate to contacts page
-                this.router.navigate(['contacts', user]);
+                // navigate to clients page
+                this.router.navigate(['clients', user]);
             } else {
                 // show error toast user
                 this.toastService.showToast('warning', 'Login failed! Please check your username or password.', 2000);

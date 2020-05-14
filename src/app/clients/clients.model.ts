@@ -1,4 +1,4 @@
-interface IContact {
+interface Iclients {
     id?: number;
     firstName?: string;
     lastName?: string;
@@ -7,7 +7,7 @@ interface IContact {
     editing?: boolean;
 }
 
-export class Contact {
+export class Clients {
     public id?: number;
     public firstName?: string;
     public lastName?: string;
@@ -15,14 +15,14 @@ export class Contact {
     public phone?: string;
     public editing?: boolean;
 
-    constructor(contact: IContact) {
-        contact.editing = this.setState(contact);
-        Object.assign(this, contact);
+    constructor(clients: Iclients) {
+        clients.editing = this.setState(clients);
+        Object.assign(this, clients);
     }
 
-    setState(contact: IContact) {
+    setState(clients: Iclients) {
 
-        if (contact == null || Object.keys(contact).length == 0) {
+        if (clients == null || Object.keys(clients).length == 0) {
             return true;
 
         }
@@ -30,8 +30,8 @@ export class Contact {
 
 
         let editing = false;
-        Object.keys(contact).forEach((key) => {
-            if (contact[key] == null) {
+        Object.keys(clients).forEach((key) => {
+            if (clients[key] == null) {
                 editing = true;
             }
 
