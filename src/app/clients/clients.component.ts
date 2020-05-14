@@ -38,7 +38,7 @@ export class ClientsComponent implements OnInit {
     }
     this.loadClients();
     this.activatedRoute.params.subscribe((data: IUser) => {
-    this.currentUser = data;
+      this.currentUser = data;
     });
   }
 
@@ -123,8 +123,10 @@ export class ClientsComponent implements OnInit {
   }
 
   showToast() {
-    const rand = Math.floor(Math.random() * 4);
-    this.toasteService.showToast('success', `Created by Brendan Nelson, Vanessa Elizondo & Nareg Apkarian (c).` + rand, 80000);
+    let myShows = ['Have fun!', 'Our app is immune to COVID-19.', 'Remember to wash your hands frequently!'];
+    let show = myShows[Math.floor(Math.random() * myShows.length)];
+    this.toasteService.showToast('success', `Created by Brendan Nelson, Vanessa Elizondo & Nareg Apkarian (c).` + ' ' + show, 80000);
   }
+
 
 }
