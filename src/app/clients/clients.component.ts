@@ -15,6 +15,7 @@ import { ToastService } from '../toast/toast.service';
 })
 export class ClientsComponent implements OnInit {
 
+  toastTypes: Array<string> = [];
   clients: Array<Clients> = [];
   clientsParams: string;
   localStorageService: LocalStorageService<Clients>;
@@ -119,6 +120,11 @@ export class ClientsComponent implements OnInit {
   logout() {
     this.localStorageService.clearItemsFromLocalStorage('user');
     this.router.navigate(['']);
+  }
+
+  showToast() {
+    const rand = Math.floor(Math.random() * 4);
+    this.toasteService.showToast('danger', `created by Brendan Nelson, Vanessa Elizondo & Nareg Apkarian: ` + rand, 90000);
   }
 
 }

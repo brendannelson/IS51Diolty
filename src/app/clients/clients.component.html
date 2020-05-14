@@ -14,7 +14,7 @@
         <a class="nav-link" href="#">Clients<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Hello {{ currentUser.username }}</a>
+        <a class="nav-link" href="#" (click)="showToast()">About<span class="sr-only">(current)</span></a>
       </li>
 
 
@@ -69,6 +69,7 @@
         <td *ngIf="!clients.editing">{{clients.phone}}</td>
         <td *ngIf="!clients.editing">
           <button type="button" class="btn btn-danger clients-button" (click)="deleteclients(i)">Delete</button>
+          <button type="button" class="btn btn-primary contact-button">Map</button>
         </td>
 
 
